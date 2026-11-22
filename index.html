@@ -18,10 +18,12 @@
     .wrap { width: min(1160px, 88%); margin-inline: auto; }
     header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 28px; border-bottom: 1px solid var(--line); }
     /* 2026-11-22: 기존 브랜드명 옆에 CI를 표시하고 작은 모토를 추가. */
-    .brand { display: inline-flex; align-items: center; gap: 10px; font-size: 1.5rem; font-weight: 800; letter-spacing: -.06em; text-decoration: none; }
+    /* 2026-11-23: 회사명을 약 두 배로 확대하고 CI 하단에 정렬. */
+    .brand { display: inline-flex; align-items: flex-end; gap: 10px; font-size: 2.3rem; font-weight: 800; letter-spacing: -.06em; text-decoration: none; }
     .brand-logo { width: 40px; height: 40px; object-fit: contain; flex-shrink: 0; }
     .motto { margin: 16px 0 0; color: var(--muted); font-size: .875rem; word-break: keep-all; }
-    .brand span { color: var(--accent); }
+    /* 2026-11-23: 글꼴 하단 여백을 보정해 글자와 CI의 시각적 하단을 맞춤. */
+    .brand span { color: var(--accent); line-height: 1; transform: translateY(.08em); }
     nav { display: flex; gap: 28px; }
     nav a { font-size: .9rem; text-decoration: none; }
     .hero { padding-block: 112px 106px; }
